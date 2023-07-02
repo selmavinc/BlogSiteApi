@@ -1,0 +1,142 @@
+{
+  "Routes": [
+    {
+      //https://localhost:7113/api/user/register
+
+      "DownstreamPathTemplate": "/api/user/register",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "POST",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7113"
+        }
+      ],
+      "UpstreamPathTemplate": "/User/Register",
+      "UpstreamHttpMethod": [ "Post" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "GatewayAuthenticationKey",
+      //  "AllowedScopes": []
+      //}
+    },
+    {
+      //https://localhost:7113/validate
+
+
+      "DownstreamPathTemplate": "/Validate",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "POST",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7113"
+        }
+      ],
+      "UpstreamPathTemplate": "/Validate",
+      "UpstreamHttpMethod": [ "Post" ]
+
+    },
+
+    {
+      //https://localhost:7113/api/user/DeleteBlog/2
+
+      "DownstreamPathTemplate": "/api/user/DeleteBlog/{id}",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "PUT",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7113"
+        }
+      ],
+      "UpstreamPathTemplate": "/Blog/Delete/{id}",
+      "UpstreamHttpMethod": [ "Put" ]
+
+    },
+
+    {
+      //https://localhost:7272/api/Blog/GetuserBlogs/1
+
+      "DownstreamPathTemplate": "/api/Blog/GetuserBlogs/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7272"
+        }
+      ],
+      "UpstreamPathTemplate": "/Blog/ViewBlog/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "GatewayAuthenticationKey",
+      //  "AllowedScopes": []
+      //}
+    },
+    {
+      //https://localhost:7272/api/Blog/addBlog
+
+
+      "DownstreamPathTemplate": "/api/Blog/addBlog",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "POST",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7272"
+        }
+      ],
+      "UpstreamPathTemplate": "/Blog/AddBlog",
+      "UpstreamHttpMethod": [ "Post" ]
+
+    },
+    {
+      //https://localhost:7258/api/common/GetBlogcategory/Travelling%20blog%20by%20Matt%20Kyhnn
+
+      "DownstreamPathTemplate": "/api/common/GetBlogcategory/{category}",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7258"
+        }
+      ],
+      "UpstreamPathTemplate": "/Blog/SearchCategory/{category}",
+      "UpstreamHttpMethod": [ "Get" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "GatewayAuthenticationKey",
+      //  "AllowedScopes": []
+      //}
+    },
+    {
+      //https://localhost:7258/api/common/GetBlogDuration/2023-08-26/2023-08-26
+
+      "DownstreamPathTemplate": "/api/common/GetBlogDuration/{fromDate}/{toDate}",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7258"
+        }
+      ],
+      "UpstreamPathTemplate": "/Blog/SearchDuration/{fromDate}/{toDate}",
+      "UpstreamHttpMethod": [ "Get" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "GatewayAuthenticationKey",
+      //  "AllowedScopes": []
+      //}
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7143"
+  }
+}
